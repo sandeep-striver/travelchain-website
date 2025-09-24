@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelChain – Every trip counts, every plan improves</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'pulse-slow': 'pulse 3s infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(50px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-black text-white font-sans antialiased">
+    <header class="fixed top-0 w-full bg-black/90 backdrop-blur-md border-b border-gray-800 z-50">
+        <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full flex items-center justify-center">
+                    <i class="fas fa-route text-white"></i>
+                </div>
+                <div>
+                    <div class="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">TravelChain</div>
+                    <div class="text-xs text-gray-400 hidden sm:block">Every trip counts, every plan improves</div>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#problem" class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded border border-gray-700 hover:border-blue-400 transition-colors">Problem</a>
+                <a href="#solution" class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded border border-gray-700 hover:border-blue-400 transition-colors">Solution</a>
+                <a href="#features" class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded border border-gray-700 hover:border-blue-400 transition-colors">Features</a>
+                <a href="#tech" class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded border border-gray-700 hover:border-blue-400 transition-colors">Tech</a>
+                <a href="#impact" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">Impact</a>
+            </div>
+            
+            <button class="md:hidden p-2 rounded border border-gray-700">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <section class="relative min-h-screen flex items-center justify-center pt-20 px-6 bg-gradient-to-br from-gray-900 via-black to-gray-900">
+        <div class="absolute inset-0 z-0">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800'%3E%3Cpath d='M100 400 Q300 200 500 400 T900 400 Q1100 200 1200 400 V800 H0 Z' fill='url(%23gradient)'/%3E%3Cdefs%3E%3ClinearGradient id='gradient' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23667eea' stop-opacity='0.1'/%3E%3Cstop offset='100%25' stop-color='%23764ba2' stop-opacity='0.1'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E" 
+                 class="w-full h-full object-cover opacity-20" alt="">
+        </div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
+            <div class="w-32 h-32 mx-auto bg-gradient-to-r from-blue-500 to-purple-600 rounded-3xl flex items-center justify-center shadow-2xl animate-pulse-slow">
+                <i class="fas fa-route text-4xl text-white"></i>
+            </div>
+            
+            <h1 class="text-6xl md:text-7xl font-black bg-gradient-to-r from-blue-400 via-purple-500 to-green-400 bg-clip-text text-transparent leading-tight">
+                TravelChain
+            </h1>
+            
+            <p class="text-2xl md:text-3xl text-gray-300 font-light max-w-3xl mx-auto">
+                Every trip counts, every plan improves
+            </p>
+            
+            <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                Smart, consent-first trip logging for NATPAC. Capture comprehensive trip chains with origin, mode, destination, and companions—passively detected, user-verified, and synced for transportation planners across India.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center space-x-2">
+                    <i class="fab fa-google-play"></i>
+                    <span>Download Android</span>
+                </button>
+                <button class="border border-gray-600 hover:bg-gray-800 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 flex items-center space-x-2">
+                    <i class="fab fa-apple"></i>
+                    <span>Download iOS</span>
+                </button>
+                <a href="#solution" class="text-blue-400 hover:text-blue-300 px-6 py-4 text-lg font-semibold flex items-center space-x-2 border border-blue-400/30 rounded-xl hover:border-blue-400 transition-colors">
+                    <i class="fas fa-arrow-down"></i>
+                    <span>Learn More</span>
+                </a>
+            </div>
+            
+            <div class="text-sm text-gray-500 pt-4">
+                <span class="bg-gray-800 px-3 py-1 rounded-full">🏆 SIH 2025 Submission</span>
+                <span class="bg-gray-800 px-3 py-1 rounded-full ml-2">🚀 Team: Lazy Innovators</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="problem" class="py-20 px-6 bg-gray-900">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 animate-fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-red-400 to-yellow-400 bg-clip-text text-transparent">
+                    The Challenge We're Solving
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Current transportation planning faces critical data collection challenges that impact millions of commuters daily
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-red-400 transition-all duration-300 animate-slide-up">
+                    <div class="w-16 h-16 bg-red-500/20 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-clock text-3xl text-red-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-red-400 mb-4">Time-Intensive Surveys</h3>
+                    <p class="text-gray-300 leading-relaxed">Manual household travel surveys are time-consuming, expensive, and cover less than 5% of the population, leading to incomplete planning data.</p>
+                </div>
+                
+                <div class="bg-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-orange-400 transition-all duration-300 animate-slide-up">
+                    <div class="w-16 h-16 bg-orange-500/20 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-database text-3xl text-orange-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-orange-400 mb-4">Lack of Real-Time Data</h3>
+                    <p class="text-gray-300 leading-relaxed">Transportation planners lack access to real-time, structured trip-chain data essential for effective urban mobility planning.</p>
+                </div>
+                
+                <div class="bg-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-yellow-400 transition-all duration-300 animate-slide-up">
+                    <div class="w-16 h-16 bg-yellow-500/20 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-search text-3xl text-yellow-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-yellow-400 mb-4">Fragmented Data Sources</h3>
+                    <p class="text-gray-300 leading-relaxed">Existing apps like Google Maps, Ola, and Uber collect trip data, but it's not research-ready or accessible to transportation planners.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="solution" class="py-20 px-6 bg-black">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
+                    How TravelChain Works
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Consent-first, privacy-aware trip logging from detection to verified trip chains
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center space-y-4">
+                    <div class="relative">
+                        <div class="w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto shadow-2xl">
+                            <i class="fas fa-user-plus text-2xl text-white"></i>
+                        </div>
+                        <div class="absolute -top-2 -right-2 w-8 h-8 bg-red-500 rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-400">Sign Up & Consent</h3>
+                    <p class="text-gray-300 text-sm">Email sign-up with OTP verification or continue as guest. Explicit consent for location tracking with full transparency.</p>
+                </div>
+                
+                <div class="text-center space-y-4">
+                    <div class="relative">
+                        <div class="w-24 h-24 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto shadow-2xl">
+                            <i class="fas fa-location-arrow text-2xl text-white"></i>
+                        </div>
+                        <div class="absolute -top-2 -right-2 w-8 h-8 bg-red-500 rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
+                    </div>
+                    <h3 class="text-xl font-bold text-green-400">Auto-Detect Movement</h3>
+                    <p class="text-gray-300 text-sm">Smart detection when movement exceeds ~200m using GPS and accelerometer data. User receives gentle nudges to confirm trips.</p>
+                </div>
+                
+                <div class="text-center space-y-4">
+                    <div class="relative">
+                        <div class="w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto shadow-2xl">
+                            <i class="fas fa-edit text-2xl text-white"></i>
+                        </div>
+                        <div class="absolute -top-2 -right-2 w-8 h-8 bg-red-500 rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
+                    </div>
+                    <h3 class="text-xl font-bold text-purple-400">Confirm & Enhance</h3>
+                    <p class="text-gray-300 text-sm">Add companions, select transport mode, set precise start/end locations on map, and add trip purpose for comprehensive data.</p>
+                </div>
+                
+                <div class="text-center space-y-4">
+                    <div class="relative">
+                        <div class="w-24 h-24 bg-gradient-to-br from-indigo-500 to-blue-600 rounded-full flex items-center justify-center mx-auto shadow-2xl">
+                            <i class="fas fa-cloud-upload-alt text-2xl text-white"></i>
+                        </div>
+                        <div class="absolute -top-2 -right-2 w-8 h-8 bg-red-500 rounded-full flex items-center justify-center text-white font-bold text-sm">4</div>
+                    </div>
+                    <h3 class="text-xl font-bold text-indigo-400">Sync & Analyze</h3>
+                    <p class="text-gray-300 text-sm">Data stored locally during trips, synced when online. Anonymized insights available to NATPAC scientists for planning.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="py-20 px-6 bg-gray-900">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                    Key Features
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Privacy-first design meets comprehensive trip logging capabilities
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-cyan-400 transition-all duration-300">
+                    <div class="w-16 h-16 bg-cyan-500/20 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-3xl text-cyan-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-cyan-400 mb-4">Privacy-First Design</h3>
+                    <p class="text-gray-300 leading-relaxed">Complete data anonymization, encrypted storage, user-controlled sharing, and privacy pause features for sensitive locations.</p>
+                </div>
+                
+                <div class="bg-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-green-400 transition-all duration-300">
+                    <div class="w-16 h-16 bg-green-500/20 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-users text-3xl text-green-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-green-400 mb-4">Companion Tracking</h3>
+                    <p class="text-gray-300 leading-relaxed">Log accompanying travelers including children, elderly, and group members for inclusive transportation planning.</p>
+                </div>
+                
+                <div class="bg-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-purple-400 transition-all duration-300">
+                    <div class="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-route text-3xl text-purple-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-purple-400 mb-4">Multi-Modal Detection</h3>
+                    <p class="text-gray-300 leading-relaxed">Automatically detect and log transitions between walking, bus, metro, auto-rickshaw, and other transport modes.</p>
+                </div>
+                
+                <div class="bg-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-yellow-400 transition-all duration-300">
+                    <div class="w-16 h-16 bg-yellow-500/20 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-battery-full text-3xl text-yellow-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-yellow-400 mb-4">Battery Optimized</h3>
+                    <p class="text-gray-300 leading-relaxed">Efficient background operation with optimized GPS intervals and hybrid location detection to minimize battery drain.</p>
+                </div>
+                
+                <div class="bg-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-pink-400 transition-all duration-300">
+                    <div class="w-16 h-16 bg-pink-500/20 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-gamepad text-3xl text-pink-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-pink-400 mb-4">Gamified Experience</h3>
+                    <p class="text-gray-300 leading-relaxed">Travel streaks, rewards system, leaderboards, and social sharing features to boost user engagement and adoption.</p>
+                </div>
+                
+                <div class="bg-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-indigo-400 transition-all duration-300">
+                    <div class="w-16 h-16 bg-indigo-500/20 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-wifi text-3xl text-indigo-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-indigo-400 mb-4">Offline-First</h3>
+                    <p class="text-gray-300 leading-relaxed">Data stored locally during trips and synced when online, ensuring functionality even in poor connectivity areas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tech" class="py-20 px-6 bg-black">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
+                    Technology Stack
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Built with modern, scalable technologies for cross-platform compatibility
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="bg-gray-800 border border-gray-700 rounded-xl p-6 text-center hover:border-blue-400 transition-colors">
+                    <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="fab fa-flutter text-2xl text-blue-400"></i>
+                    </div>
+                    <h4 class="font-bold text-blue-400 mb-2">Flutter</h4>
+                    <p class="text-gray-400 text-sm">Cross-platform mobile app</p>
+                </div>
+                
+                <div class="bg-gray-800 border border-gray-700 rounded-xl p-6 text-center hover:border-green-400 transition-colors">
+                    <div class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="fab fa-node-js text-2xl text-green-400"></i>
+                    </div>
+                    <h4 class="font-bold text-green-400 mb-2">Node.js</h4>
+                    <p class="text-gray-400 text-sm">Backend infrastructure</p>
+                </div>
+                
+                <div class="bg-gray-800 border border-gray-700 rounded-xl p-6 text-center hover:border-purple-400 transition-colors">
+                    <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-database text-2xl text-purple-400"></i>
+                    </div>
+                    <h4 class="font-bold text-purple-400 mb-2">PostgreSQL</h4>
+                    <p class="text-gray-400 text-sm">Data storage</p>
+                </div>
+                
+                <div class="bg-gray-800 border border-gray-700 rounded-xl p-6 text-center hover:border-orange-400 transition-colors">
+                    <div class="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-fire text-2xl text-orange-400"></i>
+                    </div>
+                    <h4 class="font-bold text-orange-400 mb-2">Firebase</h4>
+                    <p class="text-gray-400 text-sm">Real-time sync</p>
+                </div>
+                
+                <div class="bg-gray-800 border border-gray-700 rounded-xl p-6 text-center hover:border-red-400 transition-colors">
+                    <div class="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="fab fa-google text-2xl text-red-400"></i>
+                    </div>
+                    <h4 class="font-bold text-red-400 mb-2">Google Maps</h4>
+                    <p class="text-gray-400 text-sm">Location services</p>
+                </div>
+                
+                <div class="bg-gray-800 border border-gray-700 rounded-xl p-6 text-center hover:border-cyan-400 transition-colors">
+                    <div class="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-brain text-2xl text-cyan-400"></i>
+                    </div>
+                    <h4 class="font-bold text-cyan-400 mb-2">TensorFlow</h4>
+                    <p class="text-gray-400 text-sm">ML models</p>
+                </div>
+                
+                <div class="bg-gray-800 border border-gray-700 rounded-xl p-6 text-center hover:border-blue-400 transition-colors">
+                    <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="fab fa-react text-2xl text-blue-400"></i>
+                    </div>
+                    <h4 class="font-bold text-blue-400 mb-2">React.js</h4>
+                    <p class="text-gray-400 text-sm">Admin dashboard</p>
+                </div>
+                
+                <div class="bg-gray-800 border border-gray-700 rounded-xl p-6 text-center hover:border-green-400 transition-colors">
+                    <div class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tachometer-alt text-2xl text-green-400"></i>
+                    </div>
+                    <h4 class="font-bold text-green-400 mb-2">FastAPI</h4>
+                    <p class="text-gray-400 text-sm">High-performance API</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="impact" class="py-20 px-6 bg-gray-900">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
+                    Impact & Benefits
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Transforming transportation planning through data-driven insights
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-8 mb-16">
+                <div class="bg-gray-800 border border-gray-700 rounded-2xl p-8 text-center">
+                    <div class="text-5xl font-black bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent mb-2">450M+</div>
+                    <div class="text-gray-300 font-semibold">Daily Commuters in India</div>
+                </div>
+                
+                <div class="bg-gray-800 border border-gray-700 rounded-2xl p-8 text-center">
+                    <div class="text-5xl font-black bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent mb-2">750M+</div>
+                    <div class="text-gray-300 font-semibold">Smartphone Users</div>
+                </div>
+                
+                <div class="bg-gray-800 border border-gray-700 rounded-2xl p-8 text-center">
+                    <div class="text-5xl font-black bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent mb-2">95%</div>
+                    <div class="text-gray-300 font-semibold">Reduction in Survey Costs</div>
+                </div>
+                
+                <div class="bg-gray-800 border border-gray-700 rounded-2xl p-8 text-center">
+                    <div class="text-5xl font-black bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent mb-2">24/7</div>
+                    <div class="text-gray-300 font-semibold">Real-time Data Collection</div>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-green-400 transition-all duration-300">
+                    <div class="w-16 h-16 bg-green-500/20 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-leaf text-3xl text-green-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-green-400 mb-4">Environmental Impact</h3>
+                    <p class="text-gray-300 leading-relaxed">Optimized routes and improved public transport usage lead to reduced emissions and better air quality.</p>
+                </div>
+                
+                <div class="bg-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-blue-400 transition-all duration-300">
+                    <div class="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-3xl text-blue-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-400 mb-4">Economic Benefits</h3>
+                    <p class="text-gray-300 leading-relaxed">Reduced survey costs enable faster planning decisions and more efficient allocation of transportation resources.</p>
+                </div>
+                
+                <div class="bg-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-purple-400 transition-all duration-300">
+                    <div class="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-city text-3xl text-purple-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-purple-400 mb-4">Smart City Integration</h3>
+                    <p class="text-gray-300 leading-relaxed">Real-time insights support urban mobility projects and smart city initiatives across India.</p>
+                </div>
+                
+                <div class="bg-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-yellow-400 transition-all duration-300">
+                    <div class="w-16 h-16 bg-yellow-500/20 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-users-cog text-3xl text-yellow-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-yellow-400 mb-4">Evidence-Based Planning</h3>
+                    <p class="text-gray-300 leading-relaxed">Enable policy-makers to design transportation systems based on actual travel patterns rather than assumptions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 bg-black">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+                    Business Model
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Sustainable revenue streams supporting long-term growth and development
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-yellow-400 transition-all duration-300">
+                    <div class="w-16 h-16 bg-yellow-500/20 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-trophy text-3xl text-yellow-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-yellow-400 mb-4">In-App Incentive Platform</h3>
+                    <p class="text-gray-300 leading-relaxed mb-4">SaaS model that boosts user engagement and loyalty through dynamic incentives.</p>
+                    <div class="text-sm text-gray-400">Revenue via subscription fees from businesses</div>
+                </div>
+                
+                <div class="bg-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-green-400 transition-all duration-300">
+                    <div class="w-16 h-16 bg-green-500/20 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-bus text-3xl text-green-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-green-400 mb-4">Public Transport Ticketing</h3>
+                    <p class="text-gray-300 leading-relaxed mb-4">B2G platform digitizing ticketing for state transport, improving efficiency & user convenience.</p>
+                    <div class="text-sm text-gray-400">Revenue via long-term government contracts</div>
+                </div>
+                
+                <div class="bg-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-blue-400 transition-all duration-300">
+                    <div class="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-building text-3xl text-blue-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-400 mb-4">Smart City Planning SaaS</h3>
+                    <p class="text-gray-300 leading-relaxed mb-4">Data-driven urban planning tool for governments, unifying city data (traffic, utilities, etc.).</p>
+                    <div class="text-sm text-gray-400">Revenue from subscriptions & custom analytics services</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 bg-gray-900">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                    Research & References
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Our solution is backed by comprehensive research and proven methodologies
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-gray-800 border border-gray-700 rounded-2xl p-8">
+                    <div class="w-16 h-16 bg-indigo-500/20 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-file-alt text-3xl text-indigo-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-indigo-400 mb-4">National Travel Survey (UK)</h3>
+                    <p class="text-gray-300 leading-relaxed">Proof of structured trip logging benefits and comprehensive transportation data collection methodologies.</p>
+                </div>
+                
+                <div class="bg-gray-800 border border-gray-700 rounded-2xl p-8">
+                    <div class="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-bar text-3xl text-purple-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-purple-400 mb-4">NATPAC Kerala Reports</h3>
+                    <p class="text-gray-300 leading-relaxed">Highlighting inefficiencies in manual surveys and the need for automated data collection systems.</p>
+                </div>
+                
+                <div class="bg-gray-800 border border-gray-700 rounded-2xl p-8">
+                    <div class="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fab fa-google text-3xl text-blue-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-400 mb-4">Google Maps Timeline</h3>
+                    <p class="text-gray-300 leading-relaxed">Existing consumer tracking capabilities, but lacking research-readiness for transportation planning.</p>
+                </div>
+                
+                <div class="bg-gray-800 border border-gray-700 rounded-2xl p-8">
+                    <div class="w-16 h-16 bg-green-500/20 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-users text-3xl text-green-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-green-400 mb-4">Census & MoHUA Data</h3>
+                    <p class="text-gray-300 leading-relaxed">450M+ daily commuters and 750M+ smartphone users in India show strong app adoption potential.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 bg-black">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                Ready to Transform Transportation Planning?
+            </h2>
+            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Join us in revolutionizing how we understand and plan urban mobility across India
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <button class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-xl text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center space-x-2">
+                    <i class="fas fa-rocket"></i>
+                    <span>Get Early Access</span>
+                </button>
+                <button class="border border-gray-600 hover:bg-gray-800 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 flex items-center space-x-2">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact Team <hyperlink href="mailto:https://www.linkedin.com/in/sandeep--chaudhary/">Sandeep Chaudhary</hyperlink>
+                         </span>
+                </button>
+            </div>
+            
+            <div class="mt-8 text-sm text-gray-400">
+                <p>🏆 Smart India Hackathon 2025 | Team: Lazy Innovators | Problem ID: 25082</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 border-t border-gray-800 py-12 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full flex items-center justify-center">
+                            <i class="fas fa-route text-white"></i>
+                        </div>
+                        <div>
+                            <div class="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">TravelChain</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm">Every trip counts, every plan improves. Transforming transportation planning through smart, consent-first trip logging.</p>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold text-white mb-4">Solution</h3>
+                    <div class="space-y-2 text-sm">
+                        <a href="#problem" class="block text-gray-400 hover:text-blue-400 transition-colors">Problem Statement</a>
+                        <a href="#solution" class="block text-gray-400 hover:text-blue-400 transition-colors">How It Works</a>
+                        <a href="#features" class="block text-gray-400 hover:text-blue-400 transition-colors">Key Features</a>
+                        <a href="#tech" class="block text-gray-400 hover:text-blue-400 transition-colors">Technology</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold text-white mb-4">Company</h3>
+                    <div class="space-y-2 text-sm">
+                        <a href="#impact" class="block text-gray-400 hover:text-blue-400 transition-colors">Impact & Benefits</a>
+                        <a href="#" class="block text-gray-400 hover:text-blue-400 transition-colors">Business Model</a>
+                        <a href="#" class="block text-gray-400 hover:text-blue-400 transition-colors">Research</a>
+                        <a href="#" class="block text-gray-400 hover:text-blue-400 transition-colors">Team</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold text-white mb-4">Contact</h3>
+                    <div class="space-y-2 text-sm">
+                        <a href="mailto:team@travelchain.app" class="block text-gray-400 hover:text-blue-400 transition-colors">team@travelchain.app</a>
+                        <a href="#" class="block text-gray-400 hover:text-blue-400 transition-colors">Support Center</a>
+                        <div class="flex space-x-4 mt-4">
+                            <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2025 TravelChain. Built for Smart India Hackathon 2025 by Team Lazy Innovators. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.querySelectorAll('.animate-fade-in, .animate-slide-up').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.md\\:hidden button').addEventListener('click', function() {
+            // Add mobile menu functionality here if needed
+            console.log('Mobile menu clicked');
+        });
+    </script>
+</body>
+</html>
